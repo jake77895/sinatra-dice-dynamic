@@ -65,7 +65,7 @@ get("/dynamic/50/6") do
   erb(:flexible)
 end
 
-get("/dynamic/:zebra/:elephant") do
+get("/dice/:zebra/:elephant") do
 
   @rolls = []
 
