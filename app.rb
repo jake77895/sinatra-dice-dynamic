@@ -64,3 +64,16 @@ get("/dynamic/50/6") do
   
   erb(:flexible)
 end
+
+get("/dynamic/:zebra/:elephant") do
+
+  @rolls = []
+
+  params.fetch("zebra").to_i.times do
+    die = rand(1..params.fetch("elephant").to_i)
+
+    @rolls.push(die)
+  end
+  
+  erb(:flexible)
+end
